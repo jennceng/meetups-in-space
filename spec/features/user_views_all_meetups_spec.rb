@@ -21,7 +21,7 @@ feature "User visits home page" do
       creator: user
     )
     visit '/meetups'
-    binding.pry
+    # binding.pry
 
     expect(page).to have_content "launchers who lunch"
   end
