@@ -14,13 +14,13 @@ feature "User visits home page" do
       email: "jarlax1@launchacademy.com",
       avatar_url: "https://avatars2.githubusercontent.com/u/174825?v=3&s=400"
     )
-    binding.pry
     meetup = Meetup.create(
       name: "launchers who lunch",
       description: "eating in chinatown",
       location: "chinatown",
       creator: user
     )
+    binding.pry
     visit '/meetups'
 
     expect(page).to have_content "launchers who lunch"
